@@ -1,16 +1,40 @@
-# imagepicker
+# Flutter Image Picker App
 
-A new Flutter project.
+A simple one-page Flutter application that allows users to select an image from their device gallery with full permission handling and clean UI feedback.
 
-## Getting Started
+## Cara Menjalankan Aplikasi
 
-This project is a starting point for a Flutter application.
+1. Pastikan Flutter sudah terinstal di perangkat Anda.
+   Jalankan perintah berikut untuk memastikan:
+   flutter --version
 
-A few resources to get you started if this is your first Flutter project:
+2. Clone repository ini:
+   git clone https://github.com/username/flutter-image-picker-app.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Masuk ke folder proyek:
+   cd flutter-image-picker-app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+4. Install dependency:
+   flutter pub get
+
+5. Jalankan aplikasi:
+   flutter run
+
+## Package yang Digunakan
+
+- cupertino_icons 
+- image_picker 
+- permission_handler 
+- app_settings
+- provider
+- awesome_dialog
+
+## Alur Aplikasi
+
+1. Pengguna menekan tombol “Pilih Foto”.
+2. Aplikasi memeriksa izin akses galeri.
+   - Jika izin diberikan → galeri terbuka.
+   - Jika izin ditolak sementara → muncul SnackBar dengan pesan.
+   - Jika izin ditolak permanen → muncul AwesomeDialog yang menawarkan untuk membuka pengaturan aplikasi.
+3. Setelah gambar dipilih, tampil di layar utama.
+4. Jika dibatalkan, aplikasi tetap berjalan tanpa crash.
